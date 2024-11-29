@@ -1,7 +1,26 @@
 h1{
-    color: red;
+    color: rgb(194, 0, 90);
 }
 
 .logo{
     width: 300px;
+}
+
+.del{
+    padding: 15px 32px;
+    background-color: red;
+    border: none;
+    transition: .5s;
+    
+}
+
+.del:hover{
+    background-color: brown;
+    margin-top: 2px;
+}
+
+.del a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
 }
