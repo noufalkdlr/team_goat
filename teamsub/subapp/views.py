@@ -5,4 +5,5 @@ def index(request):
     return render(request,'index.html')
 
 def list(request):
-    return render(request,'list.html')
+    movie_list =models.MovieInfo.objects.all()
+    return render(request,'list.html',{'movie':movie_list})
