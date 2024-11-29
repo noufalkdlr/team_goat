@@ -1,10 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from . import models
 from . import forms
 
 def index(request):
-    frm = forms.MovieForm()
-    return render(request,'index.html',{'frm':frm})
+    
+    return render(request, 'index.html',)
 
 def list(request):
     movie_list =models.MovieInfo.objects.all()
