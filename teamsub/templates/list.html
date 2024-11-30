@@ -4,6 +4,7 @@
 
 {% for movie in movie %}
 <h1>{{movie.title}}</h1>
+<img src="{{movie.poster.url}}" alt="">
 <button class="del"><a href="/deletemovie/{{movie.id}}">Delete</a></button>
 {% endfor %}
 

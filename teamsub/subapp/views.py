@@ -4,8 +4,8 @@ from . import forms
 
 def index(request):
 
-    if request.POST:
-        frm = forms.MovieForm(request.POST)
+    if request.method == 'POST':
+        frm = forms.MovieForm(request.POST, request.FILES)
         if frm.is_valid():
             frm.save()
     else:
@@ -19,6 +19,7 @@ def index(request):
 
 def list(request):
     movie_list =models.MovieInfo.objects.all()
+    movie_list = movie_list.order_by('-id')
     return render(request,'list.html',{'movie':movie_list})
 
 def movie_delete(requset, id):
